@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Word Counter App</title>
+	<link rel="stylesheet" type="text/css" href="word-counter.css">
+	<script src="angular.min.js"></script>
+	<script src="word-counter.js"></script>
+</head>
+<body ng-app="WordCounter">
+<section class="container">
+	<header>
+		<h1>A Simple Word Counter App - Using Angular</h1>
+	</header>
+
+	<section>
+		<article ng-controller="CounterController">
+			<h1>Thank you for trying our {{projectName}}</h1>
+			<p>Please do not enter more than 50 words in the space provided below:</p>
+			<textarea placeholder="Your message here" autofocus ng-model="message" ng-keypress="countWords()"></textarea>
+			<input type="text" disabled ng-model="numWords" style="background: {{bgcolor}}">
+			<p>{{numWords}}</p>
+		</article>
+	</section>
+</section>
+
+
+<script type="text/javascript">
+	// function countWords() {
+	// 	//Select all elements of interest
+	// 	var txtMsg = document.getElementById('txtMsg');
+	// 	var txtDisplay = document.getElementById('txtDisplay');
+
+	// 	//Get user's input in txtMsg
+	// 	var message = txtMsg.value;
+
+	// 	//Sanitize user's input by replacing multiple white spaces with one white space
+	// 	message = message.replace(/\s+/g, " ");
+
+	// 	//Break message into pieces in order to count number of words in the message
+	// 	var numberOfWords = message.split(" ").length;
+
+	// 	//Display number of words in the txtDisplay element;
+	// 	if (numberOfWords > 50) {
+	// 		alert("You have exceeded the maximum number of words allowed!");
+	// 	} else {
+	// 		txtDisplay.value = numberOfWords + " word(s) remaining";
+	// 	}
+
+	// }
+</script>
+</body>
+</html>
